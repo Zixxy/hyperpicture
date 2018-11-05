@@ -87,7 +87,7 @@ class HyperNetwork:
             small_filters = int(small_filters/2)
 
         small_weights_out = y
-        small_weights_out = tf.reshape(small_weights_out, [-1, np.prod(small_weights_out.get_shap
+        small_weights_out = tf.reshape(small_weights_out, [-1, np.prod(small_weights_out.get_shape().as_list()[1:])])
         current_out_dim = np.prod(small_weights_out.get_shape().as_list()[1:])
         self.matrices = []
         self.bsss = []

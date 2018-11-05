@@ -226,7 +226,7 @@ class ContinousPictureNetwork:
         ssims, psnrs = [], []
         for j in tqdm(range(len(imgs))):
             img_path = imgs[j]
-            in_img, tar_img, out_img = r_test(img_path imgs_downscaled[j])
+            in_img, tar_img, out_img = r_test(img_path, imgs_downscaled[j])
             in_img = np.clip(in_img, 0, 255)
             tar_img = np.clip(tar_img, 0, 255)
             out_img = np.clip(out_img * 255, 0, 255)
